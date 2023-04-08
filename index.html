@@ -11,29 +11,29 @@
 <body>
 
     <!--THIS IS A FORM FOR USER INPUT-->
-    <form>
+    <form id="pizza-form">
         <!--Name entry-->
         <label for="name">Please Enter Your Name:</label>
         <input id="name" type="text" minlength="3" required>
 
         <!--Choose size of pizza-->
         <div>
-            <input type="radio" id="small" name="pizza-size" value="{"name": "small", "price": 8}"> 
+            <input type="radio" id="small" name="pizza-size" value='{"name": "small", "price": 8}'> 
             <label for="small">Small</label>
         </div>
 
         <div>
-            <input type="radio" id="medium" name="pizza-size" value="{"name": "medium", "price": 10}"> 
+            <input type="radio" id="medium" name="pizza-size" value='{"name": "medium", "price": 10}'> 
             <label for="medium">Medium</label>
         </div>
 
         <div>
-            <input type="radio" id="large" name="pizza-size" value="{"name": "large", "price": 14}"> 
+            <input type="radio" id="large" name="pizza-size" value='{"name": "large", "price": 14}'> 
             <label for="large">Large</label>
         </div>
 
         <div>
-            <input type="radio" id="x-large" name="pizza-size" value="{"name": "x-large", "price": 16}"> 
+            <input type="radio" id="x-large" name="pizza-size" value='{"name": "x-large", "price": 16}'> 
             <label for="x-large">X-Large</label>
         </div>
 
@@ -41,22 +41,22 @@
         <!--Choose sauce for pizza base-->
 
         <div>
-            <input type="radio" id="marinara" name="pizza-sauce" value="{"name": "marinara", "price": 1}"> 
+            <input type="radio" id="marinara" name="pizza-sauce" value='{"name": "marinara", "price": 1}'> 
             <label>Marinara</label>
         </div>
 
         <div>
-            <input type="radio" id="bbq" name="pizza-sauce" value="{"name": "bbq", "price": 2}"> 
+            <input type="radio" id="bbq" name="pizza-sauce" value='{"name": "bbq", "price": 2}'> 
             <label>BBQ</label>
         </div>
         
         <div>
-            <input type="radio" id="ranch" name="pizza-sauce" value="{"name": "ranch", "price": 2}"> 
+            <input type="radio" id="ranch" name="pizza-sauce" value='{"name": "ranch", "price": 2}'> 
             <label>Ranch</label>
         </div>
 
         <div>
-            <input type="radio" id="alfredo" name="pizza-sauce" value="{"name": "alfredo", "price": 2}"> 
+            <input type="radio" id="alfredo" name="pizza-sauce" value='{"name": "alfredo", "price": 2}'> 
             <label>Alfredo</label>
         </div>
 
@@ -64,12 +64,12 @@
 
         <label for="pizzameat">Choose a Meat Option:</label>
             <select name="pizza-meat" id="pizzameat">
-                <option value="{"name": "pepperoni", "price": 2}">Pepperoni</option>
-                <option value="{"name": "sausage", "price": 2}">Sausage</option>
-                <option value="{"name": "c-bacon", "price": 2}">Canadian Bacon</option>
-                <option value="{"name": "chicken", "price": 2}">Chicken</option>
-                <option value="{"name": "meatballs", "price": 2}">Meatballs</option>
-                <option value="{"name": "no-meat", "price": 0}">None</option>
+                <option value='{"name": "pepperoni", "price": 2}'>Pepperoni</option>
+                <option value='{"name": "sausage", "price": 2}'>Sausage</option>
+                <option value='{"name": "c-bacon", "price": 2}'>Canadian Bacon</option>
+                <option value='{"name": "chicken", "price": 2}'>Chicken</option>
+                <option value='{"name": "meatballs", "price": 2}'>Meatballs</option>
+                <option value='{"name": "no-meat", "price": 0}'>None</option>
             </select>
 
             <br>
@@ -78,57 +78,57 @@
         <p>Choose toppings!</p> 
 
         <div>
-            <input type="checkbox" id="green-pepper" name="pizza-topping" value="{"name": "green-pepper", "price": .25}"> 
+            <input type="checkbox" id="green-pepper" name="pizza-topping" value='{"name": "green-pepper", "price": .25}'> 
             <label>Green Pepper</label>
         </div>
 
         <div>
-            <input type="checkbox" id="mushrooms" name="pizza-topping" value="{"name": "mushrooms", "price": .25}"> 
+            <input type="checkbox" id="mushrooms" name="pizza-topping" value='{"name": "mushrooms", "price": .25}'> 
             <label>Mushrooms</label>
         </div>
 
         <div>
-            <input type="checkbox" id="onions" name="pizza-topping" value="{"name": "onions", "price": .25}"> 
+            <input type="checkbox" id="onions" name="pizza-topping" value='{"name": "onions", "price": .25}'> 
             <label>Onions</label>
         </div>
 
         <div>
-            <input type="checkbox" id="olives" name="pizza-topping" value="{"name": "olives", "price": .25}"> 
+            <input type="checkbox" id="olives" name="pizza-topping" value='{"name": "olives", "price": .25}'> 
             <label>Olives</label>
         </div>
 
         <div>
-            <input type="checkbox" id="tomatoes" name="pizza-topping" value="{"name": "tomatoes", "price": .25}"> 
+            <input type="checkbox" id="tomatoes" name="pizza-topping" value='{"name": "tomatoes", "price": .25}'> 
             <label>Tomatoes</label>
         </div>
 
         <div>
-            <input type="checkbox" id="spinach" name="pizza-topping" value="{"name": "spinach", "price": .25}"> 
+            <input type="checkbox" id="spinach" name="pizza-topping" value='{"name": "spinach", "price": .25}'> 
             <label>Spinach</label>
         </div>
 
         <div>
-            <input type="checkbox" id="garlic" name="pizza-topping" value="{"name": "garlic", "price": .25}"> 
+            <input type="checkbox" id="garlic" name="pizza-topping" value='{"name": "garlic", "price": .25}'> 
             <label>Garlic</label>
         </div>
 
         <div>
-            <input type="checkbox" id="jalapenos" name="pizza-topping" value="{"name": "jalapenos", "price": .25}"> 
+            <input type="checkbox" id="jalapenos" name="pizza-topping" value='{"name": "jalapenos", "price": .25}'> 
             <label>Jalapenos</label>
         </div>
 
         <div>
-            <input type="checkbox" id="banana-pepper" name="pizza-topping" value="{"name": "banana-pepper", "price": .25}"> 
+            <input type="checkbox" id="banana-pepper" name="pizza-topping" value='{"name": "banana-pepper", "price": .25}'> 
             <label>Banana Pepper</label>
         </div>
 
         <div>
-            <input type="checkbox" id="artichoke" name="pizza-topping" value="{"name": "artichoke", "price": .25}"> 
+            <input type="checkbox" id="artichoke" name="pizza-topping" value='{"name": "artichoke", "price": .25}'> 
             <label>Artichoke</label>
         </div>
 
         <br>
-        <button>Make my Pizza!</button>
+        <button type="submit">Make my Pizza!</button>
 
     </form>
     
