@@ -17,19 +17,25 @@
         <input id="name" type="text" required>
 
         <!--Choose size of pizza-->
-        
-        <p>Choose your Size</p>
-        <input type="radio">
-        <label>Small</label>
+        <div>
+            <input type="radio" id="small" name="pizza-size" value="{"name": "small", "price": 10}"> 
+            <label>Small</label>
+        </div>
 
-        <input type="radio">
-        <label>Medium</label>
+        <div>
+            <input type="radio" id="medium" name="pizza-size" value="{"name": "medium", "price": 12}"> 
+            <label>Medium</label>
+        </div>
 
-        <input type="radio">
-        <label>Large</label>
+        <div>
+            <input type="radio" id="large" name="pizza-size" value="{"name": "large", "price": 14}"> 
+            <label>Large</label>
+        </div>
 
-        <input type="radio">
-        <label>X-Large</label>
+        <div>
+            <input type="radio" id="x-large" name="pizza-size" value="{"name": "x-large", "price": 16}"> 
+            <label>X-Large</label>
+        </div>
 
         <!--Choose sauce for pizza base-->
         <p>Choose your Sauce</p>
@@ -62,7 +68,7 @@
             <br>
 
         <!--Toppings list!-->
-        <p>Choose toppings!</p>
+        <p>Choose toppings!</p> 
 
         <input type="checkbox">
         <label>Green Pepper</label>
@@ -93,14 +99,6 @@
 
         <input type="checkbox">
         <label>Artichoke</label>
-
-
-
-
-
-
-        
-
 
         <br>
         <button>Make my Pizza!</button>
