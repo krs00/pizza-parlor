@@ -15,16 +15,17 @@ class Pizza {
        };
 };
 
-
+// Using JSON parse because I made the objects in the HTML with the value attributes
+// I don't know about JSON yet so in the future I will do this better
 function createPizza() {
     // GETS NAME FOR PIZZA ORDER
-    const name = document.getElementById("name").value
+    const name = document.getElementById("name").value;
     // GET SIZE OF PIZZA
-    const size = document.querySelector('input[name="pizza-size"]:checked').value;
+    const size = JSON.parse(document.querySelector('input[name="pizza-size"]:checked').value);
     // GET SAUCE TYPE OF PIZZA
-    const sauce = document.querySelector('input[name="pizza-sauce"]:checked').value;
+    const sauce = JSON.parse(document.querySelector('input[name="pizza-sauce"]:checked').value);
     // GET MEAT TYPE OF PIZZA
-    const meat = document.getElementById("pizzameat").value
+    const meat = JSON.parse(document.getElementById("pizzameat").value);
 
     // GET TOPPING SELECTIONS FROM CHECKBOXES
     // Loop through all checkboxes and push checked into array
@@ -32,10 +33,33 @@ function createPizza() {
     const checkboxes = document.getElementsByName('pizza-topping');
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
-        toppings.push(checkboxes[i].value);
+
+        toppings.push(JSON.parse(checkboxes[i].value))
+         
+        
       }
     }
-    
+
     const myPizza = new Pizza(name, size, sauce, meat, toppings)
 
+    return myPizza;
+
 };
+
+
+
+function handleSubmit(e) {
+    // STOP PAGE REFRESH
+    e.preventDefault();
+
+    console.log(createPizza())
+
+}
+
+
+// UI LOGIC
+
+// Get form Element
+const pizzaForm = document.getElementById('pizza-form')
+
+pizzaForm.addEventListener('submit', handleSubmit)
