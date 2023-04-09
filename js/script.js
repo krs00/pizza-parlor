@@ -1,5 +1,5 @@
 // BUSINESS LOGIC
-
+ 
 // CREATE CLASS FOR PIZZA
 class Pizza {
     constructor(name, size, sauce, meat, toppings) {
@@ -7,16 +7,26 @@ class Pizza {
         this.size = size;
         this.sauce = sauce;
         this.meat = meat;
-        this.toppings = toppings;
-    }
- 
-       getName = function(){
-        return this.name;
-       };
+        this.toppings = toppings.map((topping) => {
+            return topping.price
+          }); 
+    };
+
+    getToppingsCost = function() {
+        
+        let sum = 0;
+        for(let i = 0; i < this.toppings.length; i++) {
+          if(typeof this.toppings[i] === 'number') {
+            sum += this.toppings[i];
+          }
+        }
+        return sum;
+      }
+     
+
 };
 
-// Using JSON parse because I made the objects in the HTML with the value attributes
-// I don't know about JSON yet so in the future I will do this better
+
 function createPizza() {
     // GETS NAME FOR PIZZA ORDER
     const name = document.getElementById("name").value;
@@ -33,22 +43,24 @@ function createPizza() {
     const checkboxes = document.getElementsByName('pizza-topping');
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
-
         toppings.push(JSON.parse(checkboxes[i].value))
-         
-        
       }
     }
 
     const myPizza = new Pizza(name, size, sauce, meat, toppings)
 
-    return myPizza;
+
+    const cost = myPizza.getToppingsCost();
+    console.log(cost)
+
+
+    return myPizza
 
 };
 
 
 
-function handleSubmit(e) {
+function handleSubmit(e) { 
     // STOP PAGE REFRESH
     e.preventDefault();
 
