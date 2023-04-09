@@ -12,15 +12,16 @@ class Pizza {
           }); 
     };
 
-    getToppingsCost = function() {
-        
+    getTotalCost = function() {
+        // LOOP THROUGH ARRAY OF TOPPINGS PRICE AND SUM PRICE
         let sum = 0;
         for(let i = 0; i < this.toppings.length; i++) {
           if(typeof this.toppings[i] === 'number') {
             sum += this.toppings[i];
           }
         }
-        return sum;
+        // ADD PRICE OF SAUCE, SIZE, AND MEAT TO SUMMED ARRAY TOPPING PRICE
+        return this.size.price + this.sauce.price + this.meat.price + sum
       }
      
 
@@ -50,7 +51,7 @@ function createPizza() {
     const myPizza = new Pizza(name, size, sauce, meat, toppings)
 
 
-    const cost = myPizza.getToppingsCost();
+    const cost = myPizza.getTotalCost();
     console.log(cost)
 
 
