@@ -12,6 +12,8 @@ class Pizza {
           }); 
     };
 
+    /* Function will get Total Cost of your pizza by accessing
+       each object "price" property and adding them together */
     getTotalCost = function() { 
         // LOOP THROUGH ARRAY OF TOPPINGS PRICE AND SUM PRICE
         let sum = 0;
@@ -25,15 +27,13 @@ class Pizza {
       }
 }; 
 
-
+// This function corrects the capitalization of inputted name!
 function capitalizeName(name) {
     // Lowercase entire name first
     let nameLower = name.toLowerCase() 
     // Capitalize the first letter and return the result
     return nameLower.charAt(0).toUpperCase() + nameLower.slice(1);
   } 
- 
-
 
 
 // UI LOGIC
@@ -47,16 +47,12 @@ e.preventDefault();
 // Get INPUT VALUES FROM FORM
 // GETS NAME FOR PIZZA ORDER
 const name = document.getElementById("name").value;
-console.log(name)
 // GET SIZE OF PIZZA
 const size = JSON.parse(document.querySelector('input[name="pizza-size"]:checked').value);
-console.log(size)
 // GET SAUCE TYPE OF PIZZA
 const sauce = JSON.parse(document.querySelector('input[name="pizza-sauce"]:checked').value);
-console.log(sauce)
 // GET MEAT TYPE OF PIZZA
 const meat = JSON.parse(document.getElementById("pizzameat").value);
-console.log(meat)
 
 // GET TOPPING SELECTIONS FROM CHECKBOXES
 // Loop through all checkboxes and push checked into array
@@ -67,18 +63,16 @@ console.log(meat)
         toppings.push(JSON.parse(checkboxes[i].value))
       }
     }
-console.log(toppings)
 
 
 // Create new pizza object using form inputs
 const pizza = new Pizza(name, size, sauce, meat, toppings)
 
-
 // Select out put node
 const output = document.getElementById("output-text")
-
+// NODE OF TEXT TO MSG
 output.innerText = `${capitalizeName(name)}, the pizza you ordered cost $${pizza.getTotalCost()}`
-
+// Resets form on submit :/ 
 pizzaForm.reset() 
 
 
