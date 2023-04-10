@@ -20,10 +20,18 @@ class Pizza {
             sum += this.toppings[i];
           }
         }
-        // ADD PRICE OF SAUCE, SIZE, AND MEAT TO SUMMED ARRAY TOPPING PRICE
+        // ADD PRICE OF SAUCE, SIZE, AND MEAT TO SUMMED ARRAY OF TOPPING PRICE
         return this.size.price + this.sauce.price + this.meat.price + sum
       }
 };
+
+
+function capitalizeName(name) {
+    // Lowercase entire name first
+    let nameLower = name.toLowerCase() 
+    // Capitalize the first letter and return the result
+    return nameLower.charAt(0).toUpperCase() + nameLower.slice(1);
+  }
  
 
 
@@ -60,10 +68,20 @@ console.log(meat)
       }
     }
 console.log(toppings)
+
+
+// Create new pizza object using form inputs
+const pizza = new Pizza(name, size, sauce, meat, toppings)
+
+
+// Select out put node
+const output = document.getElementById("output-text")
+
+output.innerText = `${capitalizeName(name)}, the pizza you ordered cost $${pizza.getTotalCost()}` 
+
+
+
 }
-
-
-
 
 
 
