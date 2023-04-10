@@ -14,57 +14,62 @@
     <div id="form-wrapper">
     <form id="pizza-form">
         <!--Name entry-->
-        <div>
+        <div class="spacing">
         <label for="name">Please Enter Your Name:</label>
         <input id="name" type="text" minlength="3" required>
         </div>
 
         <!--Choose size of pizza-->
-        <div>
+        <p>Choose your size!</p>
+    <div class="flex spacing">
+        <div class="space-right">
             <input type="radio" id="small" name="pizza-size" required value='{"name": "small", "price": 8}'> 
             <label for="small">Small</label>
         </div>
 
-        <div>
+        <div class="space-right">
             <input type="radio" id="medium" name="pizza-size" value='{"name": "medium", "price": 10}'> 
             <label for="medium">Medium</label>
         </div>
 
-        <div>
+        <div class="space-right">
             <input type="radio" id="large" name="pizza-size" value='{"name": "large", "price": 14}'> 
             <label for="large">Large</label>
         </div>
 
-        <div>
+        <div class="space-right">
             <input type="radio" id="x-large" name="pizza-size" value='{"name": "x-large", "price": 16}'> 
             <label for="x-large">X-Large</label>
         </div>
+    </div>
 
 
         <!--Choose sauce for pizza base-->
-
-        <div>
+        <p>Choose your sauce!</p>
+    <div class="flex spacing">
+        <div class="space-right">
             <input type="radio" id="marinara" name="pizza-sauce" required value='{"name": "marinara", "price": 1}'> 
             <label>Marinara</label>
         </div>
 
-        <div>
+        <div class="space-right">
             <input type="radio" id="bbq" name="pizza-sauce" value='{"name": "bbq", "price": 3}'>  
             <label>BBQ</label>
         </div> 
         
-        <div>
+        <div class="space-right">
             <input type="radio" id="ranch" name="pizza-sauce" value='{"name": "ranch", "price": 2}'> 
             <label>Ranch</label>
         </div>
 
-        <div>
+        <div class="space-right">
             <input type="radio" id="alfredo" name="pizza-sauce" value='{"name": "alfredo", "price": 2}'> 
             <label>Alfredo</label>
         </div>
+    </div>
 
         <!--Choose your meat!-->
-
+        <div class="spacing">
         <label for="pizzameat">Choose a Meat Option:</label>
             <select name="pizza-meat" id="pizzameat">
                 <option value='{"name": "pepperoni", "price": 2}'>Pepperoni</option>
@@ -74,12 +79,14 @@
                 <option value='{"name": "meatballs", "price": 2}'>Meatballs</option>
                 <option value='{"name": "no-meat", "price": 0}'>None</option>
             </select>
+        </div>
 
-            <br>
-
+    
         <!--Toppings list!-->
-        <p>Choose toppings!</p> 
+        <p class="spacing">Choose toppings!</p> 
 
+        <div class="inline">
+        <div>
         <div>
             <input type="checkbox" id="green-pepper" name="pizza-topping" value='{"name": "green-pepper", "price": 0.25}'> 
             <label>Green Pepper</label>
@@ -104,7 +111,11 @@
             <input type="checkbox" id="tomatoes" name="pizza-topping" value='{"name": "tomatoes", "price": 0.25}'> 
             <label>Tomatoes</label>
         </div>
+        </div>
 
+        <!-- Next Box -->
+
+        <div>
         <div>
             <input type="checkbox" id="spinach" name="pizza-topping" value='{"name": "spinach", "price": 0.25}'> 
             <label>Spinach</label>
@@ -129,6 +140,8 @@
             <input type="checkbox" id="artichoke" name="pizza-topping" value='{"name": "artichoke", "price": 1}'> 
             <label>Artichoke</label>
         </div>
+        </div>
+        </div>
 
         <br>
         <button type="submit">Make my Pizza!</button>
@@ -137,7 +150,7 @@
 </div>
 
 <div id="output-div">
-    <p id="output-text"></p>
+    <p id="output-text" ></p>
 </div>
     
 </body>

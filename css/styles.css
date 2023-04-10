@@ -48,7 +48,41 @@
     9. Create a root stacking context
   */
   #root, #__next {
-    isolation: isolate;
+    isolation: isolate; 
   }
 
-  /* CSS Reset Over -- Below is style for form and output
+  /* CSS Reset Over -- Below is style for form and output */
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
+
+
+#output-text {
+    font-size: 5rem;
+}
+
+
+#form-wrapper {
+    background-color: lightgrey;
+}
+
+.flex {
+    display: flex;
+}
+
+.spacing {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.space-right {
+    margin-right: 0.75rem;
+}
+
+.inline {
+    display: flex-inline;
+}
